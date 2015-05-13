@@ -1,0 +1,26 @@
+#flash-messages {
+  width: 100%;
+
+  $default-flash-color: hsl(250,50%,90%);
+  $notice-color: hsl(120,60%,80%);
+  $alert-color: hsl(0,60%,80);
+
+  @mixin colorful($color) {
+    background-color: $color;
+    border: 2px solid darken($color, 40%);
+  }
+
+  .flash-message {
+    padding: 10px;
+    margin-bottom: 5px;
+    @include colorful($default-flash-color);
+
+    &.notice {
+      @include colorful($notice-color);
+    }
+
+    &.alert {
+      @include colorful($alert-color);
+    }
+  }
+}
