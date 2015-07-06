@@ -2,6 +2,7 @@ class ComicsController < ApplicationController
   before_action :set_comic, only: [:show, :edit, :update, :destroy]
 
   def index
+    #random line for a test
     @comics = Comic.all
   end
 
